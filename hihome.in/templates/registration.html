@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% block title %}Home | {% endblock title %}
+{% block body %}
+
+
+{% comment %} <ul class="messages">
+      <li
+   class="{{ message.tags }}"{% endif %}></li>
+       
+</ul> {% endcomment %}
+{% comment %} {% if message.tags %} {% endcomment %}
+<style>
+#alert{
+    text-align:center;
+
+}
+</style>
+ 
+
+
+<div class="container">
+    <form  method="POST">{% csrf_token %}
+        
+        <div class="row g-3">
+            <div class="col">
+                <label for="name"  class="form-label">Name</label>
+                <input type="name" name="name" class="form-control" id="name" placeholder="First name" aria-label="First name" required>
+            </div>
+            <div class="col">
+                <label for="lastname" class="form-label">Last name</label>
+                <input type="lastname" name="lastname" class="form-control" id="lastname"placeholder="Last name" aria-label="Last name" required>
+            </div>
+        </div>
+        <div class="row g-3">
+            <div class="col">
+                <div class="row g-3">
+                    <div class="col">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" name="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="col">
+                        <label for="Phone" class="form-label">Phone number</label>
+                        <input type="phone" name="phone"class="form-control" id = "phone"placeholder="Phone number" aria-label="Last name" required>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-12">
+            <label for="address" class="form-label">Address</label>
+            <input type="address" name="address"class="form-control" id="address"
+                placeholder="such as: street,nearby,ward no.,home no." required>
+        </div>
+        <div class="col-md-6">
+            <label for="city" class="form-label">City</label>
+            <input type="city" name="city"class="form-control" id="city" required>
+        </div>
+        <div class="col-md-4">
+            <label for="state" class="form-label">State</label>
+            <select id="state" name="state"class="form-select">
+                <option selected>Choose...</option>
+                <option>Assam</option>
+                <option>Bihar</option>
+                <option>Chhattisgarh</option>
+                <option>Goa</option>
+                <option>Gujarat</option>
+                <option>Haryana</option>
+                <option>Himachal Pradesh</option>
+                <option>Jharkhand</option>
+                <option>Karnataka</option>
+                <option>Kerala</option>
+                <option>Madhya Pradesh</option>
+                <option>Maharashtra</option>
+                <option>Manipur</option>
+                <option>Meghalaya</option>
+                <option>Mizoram</option>
+                <option>Nagaland</option>
+                <option>Odisha</option>
+                <option>Punjab</option>
+                <option>Sikkim</option>
+                <option>Tamil Nadu</option>
+                <option>Telangana</option>
+                <option>Tripura</option>
+                <option>Uttar Pradesh</option>
+                <option>Uttarakhand</option>
+                <option>West Bengal</option>
+
+            </select>
+        </div>
+        <div class="col-md-2">
+            <label for="zip" class="form-label">Zip</label>
+            <input type="zip" name="zip"class="form-control" id="zip" required>
+        </div> 
+
+
+        <div class="col-md-4">
+            <label for="competetions" class="form-label">Competetions</label>
+            <select id="competetions" name="competetions"class="form-select">
+                <option selected>Choose...</option>
+                <option>VocalForLocal</option>
+                <!-- <option></option>
+                <option></option>
+                <option></option> -->
+            </select>
+            <br>
+            
+            <Br>
+
+
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary"> NEXT </button>
+            </div>
+            <br>
+
+
+    </form>
+
+</div>
+{% endblock body %}
